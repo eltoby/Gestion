@@ -1,2 +1,13 @@
 Gestion
 =======
+
+Objetivo: Aprender
+Como: Usando las ultimas técnicas y tecnologías disponibles
+
+Que se va a hacer: 
+
+Un sistema básico de Gestión
+
+* Facturacion
+* Control de Cajas / Bancos
+* Control de Stock
