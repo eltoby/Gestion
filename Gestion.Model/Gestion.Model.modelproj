@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58442643-19e5-4620-8dac-69890cb17cb3}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Gestion.Model</Name>
+    <RootNamespace>Gestion.Model</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Gestion.Model.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Arquitectura.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Arquitectura.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Arquitectura.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Arquitectura.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Arquitectura.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gestion.DataAccess\Gestion.DataAccess.csproj">
+      <Name>Gestion.DataAccess</Name>
+      <Project>{91aae307-20e4-48d7-9d18-fb647dfadb9a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Domain\Gestion.Domain.csproj">
+      <Name>Gestion.Domain</Name>
+      <Project>{e7f8795f-1a9c-46f7-ad5a-13d9ea380e69}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Service\Gestion.Service.csproj">
+      <Name>Gestion.Service</Name>
+      <Project>{978c1d4c-e269-4b75-83b4-15eb82d2fe27}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Wcf.Contracts\Gestion.Wcf.Contracts.csproj">
+      <Name>Gestion.Wcf.Contracts</Name>
+      <Project>{c2156d59-d2ef-4e97-a7d7-63b50f4ff802}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Wcf\Gestion.Wcf.csproj">
+      <Name>Gestion.Wcf</Name>
+      <Project>{0feb452a-5b4a-4762-ad50-5221e6a1cdb2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Web\Gestion.Web.csproj">
+      <Name>Gestion.Web</Name>
+      <Project>{8317a21b-3b5c-4102-bb90-79f6feef777e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

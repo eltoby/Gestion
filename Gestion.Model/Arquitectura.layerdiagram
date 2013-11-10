@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="81c826af-308b-4ad9-aa49-59ff23793020" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="b73c4c29-8c85-4d27-99b9-8e650546f1e1" name="Gestion.Domain">
+      <references>
+        <reference Id="8835dcbe-e8f7-435d-9c82-e3abe984ebc3" name="Gestion.Domain">
+          <ArtifactNode Label="Gestion.Domain" Category="CodeSchema_Project" Id="(Assembly=../Gestion.Domain/Gestion.Domain.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.Domain)" Label="Gestion.Domain.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8665f8b7-eafd-4341-be2d-3e31febac41d" name="Gestion.DataAccess">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="27cfaabd-4212-4d7b-9400-69ecb3f4e7aa" direction="Forward">
+          <layerMoniker Id="b73c4c29-8c85-4d27-99b9-8e650546f1e1" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="2929d812-bc70-4acd-a04b-11da5dc8b575" name="Gestion.DataAccess">
+          <ArtifactNode Label="Gestion.DataAccess" Category="CodeSchema_Project" Id="(Assembly=../Gestion.DataAccess/Gestion.DataAccess.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.DataAccess)" Label="Gestion.DataAccess.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f63f668d-3d42-4964-96e8-76fa345c6657" name="Gestion.Service">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="e9b29526-4c13-468c-a53c-92a6e2d20759" direction="Forward">
+          <layerMoniker Id="8665f8b7-eafd-4341-be2d-3e31febac41d" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d5186706-7a38-4993-9cc5-9a451075adf7" direction="Forward">
+          <layerMoniker Id="b73c4c29-8c85-4d27-99b9-8e650546f1e1" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="054cdcf3-2ea1-4d74-b3e8-f0a5b47c6a52" direction="Forward">
+          <layerMoniker Id="fae12890-5259-4d71-9a48-875b781d1129" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="620f36ce-88fc-458c-bc7e-4c3cc04fa71f" name="Gestion.Service">
+          <ArtifactNode Label="Gestion.Service" Category="CodeSchema_Project" Id="(Assembly=../Gestion.Service/Gestion.Service.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.Service)" Label="Gestion.Service.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="fae12890-5259-4d71-9a48-875b781d1129" name="Gestion.Wcf.Contracts">
+      <references>
+        <reference Id="3aa927bc-7a45-4a79-9f6c-905bb4e2980c" name="Gestion.Wcf.Contracts">
+          <ArtifactNode Label="Gestion.Wcf.Contracts" Category="CodeSchema_Project" Id="(Assembly=../Gestion.Wcf.Contracts/Gestion.Wcf.Contracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.Wcf.Contracts)" Label="Gestion.Wcf.Contracts.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9b456b82-3bbe-45d6-99b7-c0b7d771ccce" name="Gestion.Wcf">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="95e00bfe-0825-4548-aeb6-a987b1927f4e" direction="Forward">
+          <layerMoniker Id="f63f668d-3d42-4964-96e8-76fa345c6657" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="de8ee830-5362-4e8a-b070-81224b1bdb73" direction="Forward">
+          <layerMoniker Id="fae12890-5259-4d71-9a48-875b781d1129" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="354bd865-89a6-4921-8d9a-cba354c6350c" name="Gestion.Wcf">
+          <ArtifactNode Label="Gestion.Wcf" Category="CodeSchema_Project" Id="(Assembly=../Gestion.Wcf/Gestion.Wcf.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.Wcf)" Label="Gestion.Wcf.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f1bce085-d7c8-4bee-add3-781a4784b567" name="Gestion.Web">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="4b79bcdf-8090-4219-bf3d-48afb093d165" direction="Forward">
+          <layerMoniker Id="fae12890-5259-4d71-9a48-875b781d1129" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="91508d50-cafd-470d-901b-4f3f8cff20e4" name="Gestion.Web">
+          <ArtifactNode Label="Gestion.Web" Category="CodeSchema_Project" Id="(Assembly=../Gestion.Web/Gestion.Web.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Gestion.Web)" Label="Gestion.Web.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
