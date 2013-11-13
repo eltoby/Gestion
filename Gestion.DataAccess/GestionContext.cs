@@ -6,7 +6,7 @@
     public class GestionContext : DbContext
     {
         public GestionContext()
-            : base("GestionDBConnectionString")
+            : base()
         {
 
         }
